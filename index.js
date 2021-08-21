@@ -4,7 +4,7 @@ const connectToDb = require('./connection');
 const userModel = require("./User");
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT;
 
 //Configuring express for json
 app.use(express.json());
