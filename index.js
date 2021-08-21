@@ -59,8 +59,8 @@ app.put("/user/update", async (req, res)=>{
 	request body:	user object with the userId
 */
 app.delete('/user/delete', async (req, res)=>{
-	const {user_id} = req.body;
-	await userModel.findByIdAndDelete(user_id._id);
+	const {user} = req.body;
+	await userModel.findByIdAndDelete(user._id);
 	return res.json({"message": "User is deleted"});
 })
 
